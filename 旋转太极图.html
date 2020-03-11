@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>旋转太极图</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.circlebox {
+			width: 300px;
+			height: 300px;
+			/*border: 1px solid red;*/
+			margin: 100px auto;
+			position: relative;
+			/*旋转时间，方式*/
+			animation: move 2.5s infinite linear;
+		}
+		.ciecleblack {
+			width: 300px;
+			height: 300px;
+			background: black;
+			border-radius: 50%;
+		}
+		/*右边一个白色半圆*/
+		.circlewhite {
+			width: 150px;
+			height: 300px;
+			background: white;
+			/*白色矩形切下右上和右下角*/
+			border-top-right-radius: 150px;
+			border-bottom-right-radius: 150px;
+			/*定位*/
+			position: absolute;
+			top: 0;
+			left: 150px;
+		}
+		/*黑色中等圆*/
+		.cieclebb {
+			width: 150px;
+			height: 150px;
+			background: black;
+			border-radius: 50%;
+			position: absolute;
+			top: 0;
+			left: 75px;
+		}
+		.circleww {
+			width: 150px;
+			height: 150px;
+			background: white;
+			border-radius: 50%;
+			position: absolute;
+			top: 150px;
+			left: 75px;
+		}
+		/*白色小圆*/
+		.cieclebbl {
+			width: 40px;
+			height: 40px;
+			background: white;
+			border-radius: 50%;
+			position: absolute;
+			top: 55px;
+			left: 130px;
+		}
+		.circlewwl {
+			width: 40px;
+			height: 40px;
+			background: black;
+			border-radius: 50%;
+			position: absolute;
+			top: 205px;
+			left: 130px;
+		}
+		/*设置动画效果，旋转360度*/
+		@keyframes move {
+			from {
+				transform: rotate(0deg);
+			}
+			to {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div class="circlebox">
+		<div class="ciecleblack"></div>
+		<div class="circlewhite"></div>
+		<div class="cieclebb"></div>
+		<div class="circleww"></div>
+		<div class="cieclebbl"></div>
+		<div class="circlewwl"></div>
+	</div>
+</body>
+</html>

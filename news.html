@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<meta charset="utf-8">
+	<title>新闻列表</title>
+	<style type="text/css">
+		/*取消页面默认的边距*/
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		/*取消列表样式*/
+		li {
+			list-style: none;
+		}
+		.box {
+			width: 298px;
+			height: 198px;
+			/*盒子边框像素，样式，颜色*/
+			border: 1px solid #ccc;
+			/*如果一个盒子给了padding值，会撑大盒子。所以要减去撑大的像素*/
+			padding: 15px;
+			/*块级盒子水平居中*/
+			margin: 50px auto;
+			background: linear-gradient(#8f8f8f,#cecece);
+		}
+		.box h3 {
+			font-size: 18px;
+			/*底边框*/
+			border-bottom: 1px solid #ccc;
+			padding:5px 0;
+			margin-bottom: 10px;
+		}
+		.box ul li {
+			height: 30px;
+			line-height: 30px;
+			border-bottom: 1px dashed #ccc;
+			background: url(images/arr.png) no-repeat 3px center;
+			/*因为li没有宽度，所以padding不会撑开盒子*/
+			padding-left: 20px;
+		}
+		.box ul li a {
+			color: #333;
+			font-size: 12px;
+			/*取消链接下划线*/
+			text-decoration: none;
+			/*margin-left: 20px;*/
+			/*padding-left: 20px;*/
+		}
+		.box ul li a:hover {
+			text-decoration: underline;
+		}
+		/*圆角边框*/
+		.radius {
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+			/*border-radius: 100px;*/
+			border-radius: 50%;
+
+		}
+		p {
+			width: 100px;
+			height: 20px;
+			background-color: red;
+			color: #fff;
+			font-size: 12px;
+			text-align: center;
+			line-height: 20px;
+			/*矩形需要给出精确数值，不能用百分比*/
+			border-radius: 10px;
+		}
+		.shadow {
+			width: 298px;
+			height: 198px;
+			margin: 50px auto;
+			background-color: pink;
+			/*box-shadow: 水平阴影 垂直阴影 模糊距离（虚实）
+					阴影尺寸（影子大小） 阴影颜色 内/外阴影*/
+			/*box-shadow: 2px 2px 2px 2px rgba(0,0,0,.3);*/
+			box-shadow: 0 15px 30px rgba(0,0,0,.3);
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<!-- 标题 -->
+		<h3>最新文章/New Articles</h3>
+		<!-- 列表 -->
+		<ul>
+			<li><a href="#">北京招聘网页设计，平面设计，php</a></li>
+			<li><a href="#">体验JavaScript的魅力</a></li>
+			<li><a href="#">jQuery世界来临</a></li>
+			<li><a href="#">javaweb开发框架</a></li>
+			<li><a href="#">HTML5的不同</a></li>
+		</ul>
+	</div>
+
+	<div class="radius">
+		圆角边框
+	</div>
+	<p>矩形圆角边框</p>
+
+	<div class="shadow">盒子阴影</div>
+</body>
+</html>

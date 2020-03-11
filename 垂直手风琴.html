@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>垂直手风琴</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.listbox {
+			width: 500px;
+			/*height: 800px;
+			border: 1px solid red;*/
+			margin: 100px auto;
+		}
+		.listbox .list {
+			position: relative;
+		}
+		.listbox .list a {
+			/*行内元素改为块级元素*/
+			display: block;
+			text-decoration: none;
+			height: 35px;
+			/*背景颜色渐变*/
+			background: linear-gradient(#cecece,#8f8f8f);
+			border-radius: 5px;
+			padding-left: 15px;
+			color: #424242;
+			line-height: 35px;
+		}
+		.listbox .list p {
+			height: 0;
+			/*限制高，超出部分添加滚动条*/
+			overflow: auto;
+			padding-left: 10px;
+			margin: 5px 0;
+			transition: 0.5s;
+		}
+		.listbox .list span {
+			width: 0;
+			height: 0;
+			/*三角，设置为透明，rgba(0,0,0,0)或者transparent*/
+			border-left: 5px solid rgba(0,0,0,0);
+			border-right: 5px solid transparent;
+			border-top: 5px solid white;
+			border-bottom: 5px solid transparent;
+			position: absolute;
+			top: 15px;
+			right: 15px;
+		}
+		.listbox .list:target p {
+			/*点击.list后对此元素进行命令指示*/
+			height: 100px;
+		}
+		.listbox .list a:hover,
+		.listbox .list:target a {
+			background: linear-gradient(#6bb2ff,#2288dd);
+			color: #fff;
+		}
+		.listbox .list:target span {
+			border-left: 5px solid white;
+			border-top: 5px solid transparent;
+			right: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="listbox">
+		<div class="list" id="listone">
+			<a href="#listone">Brand</a>
+			<span></span>
+			<p>Could the coronavirus derail a sizzling US economy?
+HHS shows optimism over coronavirus vaccine timeline
+HHS shows optimism over coronavirus vaccine timeline
+Rep. Debbie Dingell previews upcoming Michigan primary
+Rep. Debbie Dingell previews upcoming Michigan primary
+Putnam County mayor on storm recovery efforts
+Putnam County mayor on storm recovery efforts
+Nancy Grace shocked by Vallow's courtroom behavior
+Nancy Grace shocked by Vallow's courtroom behavior
+GOP lawmaker rips ‘radical Far-Left’ after ‘vile’ note found on car while shopping
+‘TRULY SAD’
+GOP lawmaker rips ‘radical Far-Left’ after ‘vile’ note found on car while shopping
+Startling threats and violence against GOP voters: Part of a pattern? Florida man accused of driving van into Trump-supporters' tent reportedly smiles while entering courtMeghan McCain challenges AOC on 'misogynistic' Bernie Bros: Sanders isn't 'doing enough'New Hampshire man arrested after allegedly assaulting pro-Trump teen at polling site</p>
+		</div>
+		<div class="list" id="listtwo">
+			<a href="#listtwo">Brand</a>
+			<span></span>
+			<p>Could the coronavirus derail a sizzling US economy?
+HHS shows optimism over coronavirus vaccine timeline
+HHS shows optimism over coronavirus vaccine timeline
+Rep. Debbie Dingell previews upcoming Michigan primary
+Rep. Debbie Dingell previews upcoming Michigan primary
+Putnam County mayor on storm recovery efforts
+Putnam County mayor on storm recovery efforts
+Nancy Grace shocked by Vallow's courtroom behavior
+Nancy Grace shocked by Vallow's courtroom behavior
+GOP lawmaker rips ‘radical Far-Left’ after ‘vile’ note found on car while shopping
+‘TRULY SAD’
+GOP lawmaker rips ‘radical Far-Left’ after ‘vile’ note found on car while shopping
+Startling threats and violence against GOP voters: Part of a pattern? Florida man accused of driving van into Trump-supporters' tent reportedly smiles while entering courtMeghan McCain challenges AOC on 'misogynistic' Bernie Bros: Sanders isn't 'doing enough'New Hampshire man arrested after allegedly assaulting pro-Trump teen at polling site</p>
+		</div>
+		<div class="list" id="listthree">
+			<a href="#listthree">Brand</a>
+			<span></span>
+			<p>Could the coronavirus derail a sizzling US economy?
+HHS shows optimism over coronavirus vaccine timeline
+HHS shows optimism over coronavirus vaccine timeline
+Rep. Debbie Dingell previews upcoming Michigan primary
+Rep. Debbie Dingell previews upcoming Michigan primary
+Putnam County mayor on storm recovery efforts
+Putnam County mayor on storm recovery efforts
+Nancy Grace shocked by Vallow's courtroom behavior
+Nancy Grace shocked by Vallow's courtroom behavior
+GOP lawmaker rips ‘radical Far-Left’ after ‘vile’ note found on car while shopping
+‘TRULY SAD’
+GOP lawmaker rips ‘radical Far-Left’ after ‘vile’ note found on car while shopping
+Startling threats and violence against GOP voters: Part of a pattern? Florida man accused of driving van into Trump-supporters' tent reportedly smiles while entering courtMeghan McCain challenges AOC on 'misogynistic' Bernie Bros: Sanders isn't 'doing enough'New Hampshire man arrested after allegedly assaulting pro-Trump teen at polling site</p>
+		</div>
+	</div>
+</body>
+</html>
